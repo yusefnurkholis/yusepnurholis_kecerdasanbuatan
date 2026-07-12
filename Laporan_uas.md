@@ -184,6 +184,7 @@ Melalui visualisasi _Confusion Matrix side-by-side_:
 Confusion Matrix di atas memetakan performa klasifikasi model secara mendetail untuk setiap kelas target. Sumbu vertikal mewakili label asli dari lapangan (True Label), sedangkan sumbu horizontal mewakili hasil tebakan model (Predicted Label). Kehebatan model ini ditunjukkan oleh dominasi angka yang sangat tinggi menumpuk di sepanjang garis diagonal utama, yang berarti hampir seluruh data tes berhasil ditebak dengan benar (misalnya, 218 sampel Healthy tertebak 100% sempurna).
 
 Sedikit error minor terdeteksi di luar garis diagonal, di mana terdapat 5 sampel penyakit Blast yang salah dikenali sebagai Brown Spot, serta 1 sampel Brown Spot yang keliru dikategorikan sebagai Blast. Kekeliruan kecil ini dinilai sangat wajar secara agronomis mengingat kedua jenis penyakit jamur tersebut memiliki kemiripan morfologi visual berupa bercak kecokelatan pada fase awal infeksi daun.
+
 ---
 
 ## 8. Kesimpulan dan Rekomendasi

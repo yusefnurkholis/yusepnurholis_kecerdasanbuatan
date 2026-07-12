@@ -45,6 +45,13 @@ UAS-KecerdasanBuatan/
 └── data/
 ├── dataset/ # Folder tempat menyimpan sampel atau berkas data citra
 └── Jurnal/ # Folder tempat menyimpan file PDF referensi ilmiah (minimal 5 jurnal)
+UAS-KecerdasanBuatan/
+├── README.md # Dokumen panduan utama repositori & penjelasan langkah pengerjaan
+├── Laporan_uas.md # Laporan komprehensif tertulis yang mencakup Poin 1 sampai Poin 10
+├── uas_KecerdasanBuatan_model.ipynb # Notebook Jupyter utama berisi kode eksperimen, EDA, training,danevaluasi
+└── data/
+├── dataset/ # Folder tempat menyimpan sampel atau berkas data citra
+└── Jurnal/ # Folder tempat menyimpan file PDF referensi ilmiah (minimal 5 jurnal)
 
 ## Penjelasan Langkah Pengerjaan Proyek
 

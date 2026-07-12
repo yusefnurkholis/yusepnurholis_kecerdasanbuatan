@@ -3,6 +3,7 @@
 
 **Mata Kuliah:** Kecerdasan Buatan 
 
+
 **Topik Proyek:** Klasifikasi Penyakit Daun Padi Menggunakan Arsitektur EfficientNetB0 dan MobileNetV2
 
 **Anggota Kelompok:**

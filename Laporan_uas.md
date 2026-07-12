@@ -59,6 +59,7 @@ Proyek ini membangun model klasifikasi gambar multi-kelas berbasis _Deep Learnin
 ### Sumber Dataset
 
 Dataset yang digunakan dalam eksperimen ini adalah **"Rice Leaf Disease Images"** yang dipublikasikan secara terbuka di platform Kaggle oleh kontributor `nirmalsankalana/rice-leaf-disease-image`. Dataset ini berisi citra resolusi tinggi dari daun tanaman padi yang diambil langsung dalam kondisi lingkungan nyata di lapangan pertanian.
+link dataset ( kaggle.com/datasets/nirmalsankalana/rice-leaf-disease-image )
 
 ### Karakteristik dan Spesifikasi Data
 

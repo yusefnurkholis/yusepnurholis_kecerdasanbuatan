@@ -86,9 +86,13 @@ Grafik batang di atas menampilkan distribusi jumlah gambar setelah melewati taha
 
 <img width="491" height="374" alt="output" src="https://github.com/user-attachments/assets/62f8616d-1769-4690-af31-36372b326499" />
 
+
+
 Grafik heatmap di atas menunjukkan nilai koefisien korelasi Pearson antar saluran warna (Red, Green, Blue) dari seluruh piksel dataset daun padi. Terlihat nilai korelasi yang sangat kuat mendekati angka 1 (misalnya antara Red dan Green sebesar 0.98, serta Green dan Blue sebesar 0.95). Tingginya korelasi ini mengindikasikan adanya redundansi informasi warna yang tinggi pada citra alami daun. Bagi model CNN, pola korelasi ini menegaskan bahwa fitur bentuk geometris, tekstur bercak, dan gradasi spasial akan menjadi pembeda yang jauh lebih krusial bagi model dalam mengenali penyakit dibandingkan sekadar informasi warna murni individual.
 
 <img width="898" height="770" alt="output" src="https://github.com/user-attachments/assets/d7f54aa5-550d-4c4a-a59d-c977585ef49a" />
+
+
 
 Gambar di atas menampilkan grid visualisasi representatif dari masing-masing kelas penyakit daun padi yang digunakan untuk melatih model. Melalui sampel ini, kita dapat menganalisis karakteristik visual unik setiap kelas:
 

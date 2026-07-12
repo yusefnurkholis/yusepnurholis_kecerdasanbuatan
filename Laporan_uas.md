@@ -73,8 +73,8 @@ Dataset yang digunakan dalam eksperimen ini adalah **"Rice Leaf Disease Images"*
 ## 4. Exploratory Data Analysis (EDA)
 
 Proses EDA dilakukan secara ketat di dalam notebook untuk memastikan kualitas data sebelum masuk ke tahap pemodelan:
-<img width="704" height="419" alt="image" src="https://github.com/user-attachments/assets/4a7b5e26-35b9-417c-bb07-c6e7ed9cb22a" />
 
+![Gambar Distribusi Kelas](grafik_distribusi_kelas.png)
 
 1. **Analisis Distribusi Kelas:** Menghitung jumlah total citra per folder kelas. Hal ini penting untuk mengidentifikasi apakah terdapat masalah ketidakseimbangan data (_class imbalance_) yang dapat membuat model cenderung bias ke kelas mayoritas. Hasil perhitungan divisualisasikan menggunakan grafik batang (_countplot_).
 2. **Pengecekan File Rusak (Corruption Check):** Melakukan iterasi dan verifikasi struktural pada setiap berkas gambar menggunakan library `PIL (Pillow)`. Gambar yang tidak memiliki struktur header biner yang valid atau gagal didekode (`UnidentifiedImageError`) akan otomatis diisolasi agar tidak merusak proses _training_.

@@ -81,6 +81,11 @@ Proses EDA dilakukan secara ketat di dalam notebook untuk memastikan kualitas da
 2. **Pengecekan File Rusak (Corruption Check):** Melakukan iterasi dan verifikasi struktural pada setiap berkas gambar menggunakan library `PIL (Pillow)`. Gambar yang tidak memiliki struktur header biner yang valid atau gagal didekode (`UnidentifiedImageError`) akan otomatis diisolasi agar tidak merusak proses _training_.
 3. **Reduksi Data Duplikat (Data Deduplication):** Gambar-gambar yang identik (hasil duplikasi tak sengaja) dideteksi secara presisi dengan menghitung nilai checksum **MD5 Hash** dari isi biner file. Gambar dengan hash MD5 yang sama hanya akan dipertahankan satu (entri pertama), sedangkan duplikatnya dihapus. Langkah ini krusial untuk mencegah terjadinya kebocoran data (_data leakage_) dari set data latih ke data uji.
 
+<img width="491" height="374" alt="output" src="https://github.com/user-attachments/assets/62f8616d-1769-4690-af31-36372b326499" />
+
+<img width="898" height="770" alt="output" src="https://github.com/user-attachments/assets/d7f54aa5-550d-4c4a-a59d-c977585ef49a" />
+
+
 ## 5. Data Preparation
 
 Tahapan penyiapan data dirancang menggunakan standar terbaik penanganan data spasial:

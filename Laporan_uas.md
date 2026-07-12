@@ -75,6 +75,7 @@ Dataset yang digunakan dalam eksperimen ini adalah **"Rice Leaf Disease Images"*
 Proses EDA dilakukan secara ketat di dalam notebook untuk memastikan kualitas data sebelum masuk ke tahap pemodelan:
 
 <img width="704" height="419" alt="output" src="https://github.com/user-attachments/assets/b743110a-85ff-4933-b711-472d37e05d9c" />
+Grafik batang di atas menampilkan distribusi jumlah gambar setelah melewati tahap pembersihan data awal. Dataset menunjukkan kondisi yang sangat ideal (perfectly balanced dataset) di mana masing-masing dari empat kelas—yaitu Bacterial Blight, Blast, Brown Spot, dan Healthy—memiliki jumlah sampel yang sama persis, yaitu sebanyak 1.483 gambar per kelas. Keseimbangan data ini sangat menguntungkan proses pelatihan model Deep Learning karena menghilangkan risiko bias terhadap kelas tertentu, sehingga metrik akurasi yang dihasilkan nantinya akan bersifat objektif dan tepercaya tanpa perlu perlakuan khusus seperti oversampling atau undersampling
 
 
 1. **Analisis Distribusi Kelas:** Menghitung jumlah total citra per folder kelas. Hal ini penting untuk mengidentifikasi apakah terdapat masalah ketidakseimbangan data (_class imbalance_) yang dapat membuat model cenderung bias ke kelas mayoritas. Hasil perhitungan divisualisasikan menggunakan grafik batang (_countplot_).
@@ -82,9 +83,18 @@ Proses EDA dilakukan secara ketat di dalam notebook untuk memastikan kualitas da
 3. **Reduksi Data Duplikat (Data Deduplication):** Gambar-gambar yang identik (hasil duplikasi tak sengaja) dideteksi secara presisi dengan menghitung nilai checksum **MD5 Hash** dari isi biner file. Gambar dengan hash MD5 yang sama hanya akan dipertahankan satu (entri pertama), sedangkan duplikatnya dihapus. Langkah ini krusial untuk mencegah terjadinya kebocoran data (_data leakage_) dari set data latih ke data uji.
 
 <img width="491" height="374" alt="output" src="https://github.com/user-attachments/assets/62f8616d-1769-4690-af31-36372b326499" />
+Grafik heatmap di atas menunjukkan nilai koefisien korelasi Pearson antar saluran warna (Red, Green, Blue) dari seluruh piksel dataset daun padi. Terlihat nilai korelasi yang sangat kuat mendekati angka 1 (misalnya antara Red dan Green sebesar 0.98, serta Green dan Blue sebesar 0.95). Tingginya korelasi ini mengindikasikan adanya redundansi informasi warna yang tinggi pada citra alami daun. Bagi model CNN, pola korelasi ini menegaskan bahwa fitur bentuk geometris, tekstur bercak, dan gradasi spasial akan menjadi pembeda yang jauh lebih krusial bagi model dalam mengenali penyakit dibandingkan sekadar informasi warna murni individual.
 
 <img width="898" height="770" alt="output" src="https://github.com/user-attachments/assets/d7f54aa5-550d-4c4a-a59d-c977585ef49a" />
+Gambar di atas menampilkan grid visualisasi representatif dari masing-masing kelas penyakit daun padi yang digunakan untuk melatih model. Melalui sampel ini, kita dapat menganalisis karakteristik visual unik setiap kelas:
 
+**Bacterial Blight**: Menunjukkan gejala garis-garis layu memanjang berwarna kuning pucat hingga putih di sepanjang tepi daun.
+
+**Blast**: Ditandai dengan bercak berbentuk kornea/belah ketupat yang khas dengan bagian pusat berwarna abu-abu.
+
+**Brown Spot**: Memperlihatkan bercak-bercak bulat atau oval kecil berwarna cokelat pekat yang tersebar merata di permukaan daun.
+
+**Healthy**: Menampilkan daun padi sehat dengan warna hijau segar yang homogen tanpa bercak ataupun cacat fisik.
 
 ## 5. Data Preparation
 
@@ -106,8 +116,8 @@ Tahapan penyiapan data dirancang menggunakan standar terbaik penanganan data spa
 | **Data Validation (Validasi)** | 15% | 890 | Menilai performa model tiap epoch & optimasi parameter |
 | **Data Testing (Uji)** | 15% | 890 | Pengujian independen performa akhir akurasi model |
 | **Total Keseluruhan** | **100%** | **5.932** | **Dataset Terintegrasi** |
----
 
+Tabel di atas merangkum pembagian total 5.932 citra bersih ke dalam tiga subset komputasi yang independen. Menggunakan rasio 70:15:15 yang diterapkan secara berstrata (stratified), subset Training mendapatkan alokasi terbesar (4.152 sampel) untuk fokus mengekstrak fitur dan melatih parameter model. Sementara itu, subset Validation (890 sampel) digunakan sebagai pemantau internal agar model tidak mengalami overfitting selama proses training, dan subset Testing (890 sampel) berperan sebagai penguji akhir yang objektif untuk mengukur performa riil model saat dihadapkan pada data baru di lapangan.
 ## 6. Modeling
 
 Sesuai aturan penilaian yang mewajibkan penggunaan **minimal 2 algoritma**, proyek ini mengimplementasikan dua arsitektur Deep Learning berbasis _Transfer Learning_ dengan konfigurasi sebagai berikut:
@@ -132,6 +142,7 @@ Sesuai aturan penilaian yang mewajibkan penggunaan **minimal 2 algoritma**, proy
 | **Total Epoch Pelatihan** | 10 Epoch Awal | 10 Epoch Awal |
 | **Batch Size** | 32 Citra per Iterasi | 32 Citra per Iterasi |
 ---
+Tabel di atas menyajikan perbandingan kontrol eksperimen yang adil (fair comparison) antara kedua arsitektur model. Semua komponen hiperparameter luar—seperti resolusi gambar input ($224 \times 224$), fungsi kerugian (Categorical Crossentropy), jenis pengoptimasi (Adam optimizer dengan Learning Rate 0.001), durasi pelatihan (10 epoch), hingga ukuran batch (32)—sengaja disamakan persis. Hal ini dilakukan bertujuan agar perbedaan performa akhir yang muncul murni disebabkan oleh kekuatan struktural internal masing-masing arsitektur (Feature Extractor) dalam mengenali pola penyakit daun, bukan akibat dari manipulasi parameter luar.
 
 ## 7. Evaluation & Perbandingan Model
 
@@ -143,6 +154,8 @@ Evaluasi model dilakukan secara adil dan objektif menggunakan data dari **Test S
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **Model 1: EfficientNetB0** | **0.9875 (98.75%)** | **0.9878** | **0.9875** | **0.9874** | **Sangat Direkomendasikan** |
 | **Model 2: MobileNetV2** | 0.9569 (95.69%) | 0.9597 | 0.9569 | 0.9565 | Layak Diimplementasikan |
+
+Tabel di atas menunjukkan performa kuantitatif kedua model pada data pengujian independen. Arsitektur EfficientNetB0 unggul di seluruh metrik evaluasi dengan raihan akurasi mengagumkan sebesar 98.75% dan nilai F1-Score sebesar 0.9874. Di sisi lain, MobileNetV2 tetap menunjukkan performa yang sangat solid dan andal dengan tingkat akurasi sebesar 95.69%. Karena kedua model berhasil mencatatkan performa jauh di atas ambang batas minimal kelulusan proyek yang ditargetkan (yaitu > 85%), kedua arsitektur dinyatakan sangat layak untuk digunakan dalam skenario pelacakan penyakit di dunia nyata.
 
 ### 2. Analisis Grafik Batang Perbandingan
 

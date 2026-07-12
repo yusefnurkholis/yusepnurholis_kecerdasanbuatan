@@ -155,6 +155,9 @@ Melalui visualisasi _Confusion Matrix side-by-side_:
 - **EfficientNetB0** memiliki tingkat salah klasifikasi (_misclassification_) yang sangat rendah. Sebagian besar citra di jalur diagonal terklasifikasi dengan benar. Kesalahan kecil hanya terjadi pada pemisahan antara kelas _Blast_ dan _Brown Spot_ karena kemiripan bentuk geometris bercak pada fase awal infeksi.
 - **MobileNetV2** menunjukkan sebaran error yang sedikit lebih tinggi pada kelas daun yang memiliki bercak tipis, namun tetap mempertahankan performa yang stabil dan solid di atas ambang batas standar kelulusan tugas (85%).
 
+
+<img width="536" height="393" alt="output" src="https://github.com/user-attachments/assets/c920cc6c-f674-472a-b07c-5aa979234d45" />
+
 ---
 
 ## 8. Kesimpulan dan Rekomendasi

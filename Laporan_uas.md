@@ -117,8 +117,10 @@ Evaluasi model dilakukan secara adil dan objektif menggunakan data dari **Test S
 ### 1. Tabel Komparasi Metrik (Simulasi Hasil Eksperimen)
 
 | Nama Arsitektur Model | Accuracy | Precision (Weighted) | Recall (Weighted) | F1-Score (Weighted) |
-| **EfficientNetB0** | ~92.4% | ~92.8% | ~92.4% | ~92.5% |
-| **MobileNetV2** | ~89.1% | ~89.5% | ~89.1% | ~89.2% |
+
+| **EfficientNetB0**    | ~92.4%   | ~92.8%               | ~92.4%            | ~92.5%              |
+
+| **MobileNetV2**       | ~89.1%   | ~89.5%               | ~89.1%            | ~89.2%              |
 
 ### 2. Analisis Grafik Batang Perbandingan
 

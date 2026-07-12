@@ -116,6 +116,15 @@ Sesuai aturan penilaian yang mewajibkan penggunaan **minimal 2 algoritma**, proy
 - **Alasan Pemilihan:** Arsitektur MobileNetV2 memanfaatkan teknologi _Inverted Residual Blocks_ dan _Depthwise Separable Convolutions_. Fitur ini memangkas beban operasi perkalian matriks secara drastis tanpa mengorbankan akurasi secara ekstrem. Sangat cocok untuk skenario dunia nyata di mana model harus berjalan pada perangkat keras edge berkemampuan komputasi rendah (smartphone petani).
 - **Implementasi Model:** Menggunakan skema transfer learning yang sama dengan model pertama, di mana ekstraktor fitur MobileNetV2 dibekukan, lalu dihubungkan ke struktur classifier kustom yang sesuai dengan jumlah kategori penyakit daun padi kita.
 
+| Komponen Parameter | Konfigurasi Model 1: EfficientNetB0 | Konfigurasi Model 2: MobileNetV2 |
+| :--- | :--- | :--- |
+| **Base Model (Feature Extractor)** | EfficientNetB0 (Bobot ImageNet) | MobileNetV2 (Bobot ImageNet) |
+| **Input Shape Resolution** | $224 \\times 224 \\times 3$ piksel | $224 \\times 224 \\times 3$ piksel |
+| **Lapisan Klasifikasi Akhir** | GAP 2D + Dense Out (4 Unit, Softmax) | GAP 2D + Dense Out (4 Unit, Softmax) |
+| **Fungsi Kerugian (Loss)** | Categorical Crossentropy | Categorical Crossentropy |
+| **Optimizer & Learning Rate** | Adam (LR = 0.001) | Adam (LR = 0.001) |
+| **Total Epoch Pelatihan** | 10 Epoch Awal | 10 Epoch Awal |
+| **Batch Size** | 32 Citra per Iterasi | 32 Citra per Iterasi |
 ---
 
 ## 7. Evaluation & Perbandingan Model

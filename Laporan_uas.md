@@ -224,6 +224,11 @@ Sedikit error minor terdeteksi di luar garis diagonal, di mana terdapat 5 sampel
 
 <img width="536" height="393" alt="image" src="https://github.com/user-attachments/assets/45cac68f-8406-47c5-858b-46f902a243a4" />
 
+---
+
+HASIL DATASET MENTAH YANG DI OLAH:
+yang dimana dataset tersebut adalah padi yang terkena penyakit tungro
+
 
 <img width="473" height="427" alt="image" src="https://github.com/user-attachments/assets/224b104a-7b07-4d6c-bf9d-aec153253248" />
 

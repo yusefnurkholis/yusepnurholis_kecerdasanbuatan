@@ -4,7 +4,7 @@ Repositori ini dibuat untuk memenuhi tugas **Ujian Akhir Semester (UAS) Mata Kul
 
 ---
 
-## 📁 Arsitektur & Struktur Direktori Repositori
+##  Arsitektur & Struktur Direktori Repositori
 
 Penataan folder dan berkas di dalam repositori ini disusun secara sistematis sebagai berikut:
 
@@ -19,7 +19,7 @@ Penataan folder dan berkas di dalam repositori ini disusun secara sistematis seb
 
 ---
 
-## 📝 Alur dan Langkah Pengerjaan Proyek
+##  Alur dan Langkah Pengerjaan Proyek
 
 Proses eksperimen dan pengembangan model dilakukan melalui tahapan sistematis berikut:
 
@@ -33,7 +33,7 @@ Proses eksperimen dan pengembangan model dilakukan melalui tahapan sistematis be
 
 ---
 
-## 🤖 Ringkasan Proyek & Model Pembanding
+##  Ringkasan Proyek & Model Pembanding
 
 Proyek ini membandingkan dua arsitektur _Convolutional Neural Network_ (CNN) mutakhir berbasis _Transfer Learning_ (menggunakan bobot pre-trained dari ImageNet):
 
@@ -77,7 +77,7 @@ _Untuk membaca laporan lengkap secara detail, silakan buka dokumen [Laporan_uas.
 - Sumber Dataset: Kaggle - Rice Leaf Disease Images (nirmalsankalana/rice-leaf-disease-image).
 - Referensi Ilmiah: Minimal 5 berkas jurnal pendukung utama telah diunggah ke dalam folder data/Jurnal/ dengan sitasi bergaya APA (APA style).
 
-## 👥 Anggota Kelompok 6
+##  Anggota Kelompok 6
 
 * **YUSEP NURHOLIS** - 2406095
 * **Fugi Kusnaedi** - 2406088

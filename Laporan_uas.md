@@ -214,3 +214,8 @@ Sedikit error minor terdeteksi di luar garis diagonal, di mana terdapat 5 sampel
 3. Shrivastava, V. K., Pradhan, M. K., Minz, S., & Thakur, M. P. (2019). Rice plant disease classification using transfer learning of deep convolutional neural network. International Journal of Agricultural and Biological Engineering, 12(4), 163-167.
 4. Prasetyo, E. (2021). _Pengolahan Citra Digital dan Aplikasinya Menggunakan Python_. Yogyakarta: Penerbit Andi.
 5. TensorFlow Keras Documentation. (2026). _Image Classification and Transfer Learning API Reference_. Google Open-Source Documentation.
+
+
+---
+## 10. Lampiran 
+

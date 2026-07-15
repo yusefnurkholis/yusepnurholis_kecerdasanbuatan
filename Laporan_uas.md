@@ -1,7 +1,7 @@
 
-# LAPORAN UJIAN AKHIR SEMESTER (UAS) KECERDASAN BUATAN
+# LAPORAN UJIAN AKHIR SEMESTER (UAS) KECERDASAN BUATAN AlGORITMA DEEP LEARNING
 
-**Mata Kuliah:** Kecerdasan Buatan 
+**Mata Kuliah:** Kecerdasan Buatan
 
 
 **Topik Proyek:** Klasifikasi Penyakit Daun Padi Menggunakan Arsitektur EfficientNetB0 dan MobileNetV2

@@ -38,19 +38,23 @@ Repositori ini dibuat untuk memenuhi tugas **Ujian Akhir Semester (UAS) Mata Kul
 
 ## Arsitektur Repositori
 
-UAS-KecerdasanBuatan/
+## 📁 Inventori & Struktur Direktori Proyek
 
-├── README.md # Dokumen panduan utama repositori & penjelasan langkah pengerjaan
+Penataan folder dan berkas di dalam repositori ini disusun secara sistematis sebagai berikut:
 
-├── Laporan_uas.md # Laporan komprehensif tertulis yang mencakup Poin 1 sampai Poin 10
-
-├── uas_KecerdasanBuatan_model.ipynb # Notebook Jupyter utama berisi kode eksperimen, EDA, training,danevaluasi
-
-└── data/
-
-├── dataset/ # Folder tempat menyimpan sampel atau berkas data citra
-
-└── Jurnal/ # Folder tempat menyimpan file PDF referensi ilmiah (minimal 5 jurnal)
+| Nama Berkas / Folder | Jenis | Keterangan |
+| :--- | :---: | :--- |
+| **`data/`** | Folder | Direktori penyimpanan seluruh data proyek |
+| ├── **`Jurnal/`** | Folder | Berkas referensi jurnal ilmiah berformat `.pdf` |
+| └── **`Rice Leaf Disease Images/`** | Folder | Folder dataset gambar daun padi asli dari Kaggle |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── *Bacterial Leaf Blight/* | Folder | Kumpulan sampel gambar penyakit Hawar Daun Bakteri |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── *Brown Spot/* | Folder | Kumpulan sampel gambar penyakit Bercak Coklat |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── *Leaf Smut/* | Folder | Kumpulan sampel gambar penyakit *Leaf Smut* |
+| **`.gitignore`** | Berkas | Daftar folder/berkas rahasia atau besar yang diabaikan oleh Git |
+| **`DeepLearning_ComputerVision_Kel6_RevisiTotal.ipynb`** | Berkas | Notebook eksperimen utama (Pembersihan, Training, & Evaluasi) |
+| **`Laporan_uas.md`** | Berkas | Naskah laporan tertulis formal lengkap sesuai 9 kriteria rubrik |
+| **`README.md`** | Berkas | Dokumen panduan utama repositori (berkas ini) |
+| **`requirements.txt`** | Berkas | Daftar pustaka (*dependencies*) Python yang wajib dipasang |
 
 
 ## Penjelasan Langkah Pengerjaan Proyek

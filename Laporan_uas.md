@@ -219,3 +219,13 @@ Sedikit error minor terdeteksi di luar garis diagonal, di mana terdapat 5 sampel
 ---
 ## 10. Lampiran 
 
+<img width="704" height="419" alt="image" src="https://github.com/user-attachments/assets/88b79415-d493-49ed-9a05-f2b035b70ace" />
+
+
+<img width="536" height="393" alt="image" src="https://github.com/user-attachments/assets/45cac68f-8406-47c5-858b-46f902a243a4" />
+
+
+<img width="473" height="427" alt="image" src="https://github.com/user-attachments/assets/224b104a-7b07-4d6c-bf9d-aec153253248" />
+
+
+<img width="989" height="489" alt="image" src="https://github.com/user-attachments/assets/13a24017-50cc-4725-87d4-11d04add41b3" />
